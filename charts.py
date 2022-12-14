@@ -11,15 +11,16 @@ def plot_sims(df, plotly=True):
 
         return fig
     
-    return df.plot(legend=False)
+    ax = df.plot(legend=False, alpha=0.4, figsize=(8,6))
 
-@st.cache(hash_funcs={dict: lambda _: None}) 
+    return ax.figure
+
+# @st.cache(hash_funcs={dict: lambda _: None}) 
 def cached_plots(df):
 
     fig_dict = {
-        'sims':plot_sims(df)
+        'sims':plot_sims(df, plotly=False)
     }
 
-
-
     return fig_dict
+

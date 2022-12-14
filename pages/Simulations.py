@@ -8,6 +8,7 @@ import data
 import streamlit as st
 # https://docs.streamlit.io/library/api-reference?highlight=beta_page_config#streamlit.set_page_config
 
+
 ####################
 # Init Model Params
 ####################
@@ -91,4 +92,5 @@ with c3:
     st.table(ir[:10])
 
 with c4: 
-    st.plotly_chart(fig_dict['sims'])
+    # st.plotly_chart(fig_dict['sims'])
+    st.pyplot(fig_dict['sims'])
