@@ -1,0 +1,4 @@
+# this folder needs to be in your root directory
+
+[browser]
+gatherUsageStats = false
